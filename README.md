@@ -13,7 +13,8 @@ https://melheins.github.io/Crystals-Collector-Game/
 * The game restarts whenever the player wins or loses.
 * The random number shown at the start of the game should be between 19 - 120.
 * Each crystal should have a random hidden value between 1 - 12.
-##Coding Languages
+## Coding Languages
 * HTML
 * CSS
 * Javascript
+* jQuery
