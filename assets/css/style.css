@@ -3,18 +3,39 @@
     padding: 0 10px 0 10px;
 }
 
-#crystals {
+#crystals, #congrats, #gameover {
     text-align: center;
 }
-
 
 html, body {
     height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
 }
+
 .content {
     flex: 1 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+.jumbotron {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.jumbotron p {
+    font-size: 18px;
 }

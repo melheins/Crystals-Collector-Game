@@ -16,13 +16,45 @@
 
 <!-- Jumbotron for Title -->
 <div class="jumbotron">
-    <h1 class="text-center">Crystal Collector</h1>
-    <p>To win the game you need to collect the correct crystals to match the computers score. </p>
-<p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.  Match your score to the computers number to win.  Go above or below the computers score and you lose.  Each time the game starts the computer score and the value of each crystal will change.</p>
+    <div class="container">
+        <h1 class="text-center">Crystal Collector</h1>
+        <p>There are four crystals below. Clicking on a crystal will add a specific amount of points to your
+            total
+            score. Match your score to the computers number to win. Go above or below and you lose.
+            Each
+            time the game starts the computer score and value of each crystal will change.</p>
+    </div>
 </div>
 <div class="content">
-    <div class="container">
-
+    <div id="congrats" class="container hidden">
+        <div class="row">
+            <!-- Win/Loss Panel -->
+            <div class="col-sm-12 col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>CONGRATS</h3>
+                        <p>You collected the correct crystals and won!</p>
+                        <button class="btn btn-primary btn-sm btn-restartGame"><h1>Next Round</h1></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gameover" class="container hidden">
+        <div class="row">
+            <!-- Win/Loss Panel -->
+            <div class="col-sm-12 col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>GAME OVER</h3>
+                        <p>You failed to collect the correct crystals and have lost!</p>
+                        <button class="btn btn-primary btn-sm btn-restartGame"><h1>Next Round</h1></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game" class="container">
         <div class="row">
             <!-- Win/Loss Panel -->
             <div class="col-sm-12 col-lg-4">

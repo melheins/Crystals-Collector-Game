@@ -65,8 +65,9 @@ $(document).ready(function () {
     reset();
 
     // Every time a crystal is clicked, at its value to user amount and check win/loss conditions
-    $(".crystal-image").on("click", function () {
+    $("div#crystals").on("click", ".crystal-image", function () {
         // Grap the specific image click's value
+        console.log("test")
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
         // Add user click value to user's amount
@@ -75,14 +76,26 @@ $(document).ready(function () {
         if (userNumber === computerNumber) {
             numWins++;
             $("#wins").text(numWins);
-            alert("You win!");
-            reset();
+            //alert("You win!");
+            $('#game').addClass('hidden');
+            $('#congrats').removeClass('hidden');
+            //reset();
         }
         else if (userNumber >= computerNumber) {
             numLosses++;
             $("#losses").text(numLosses);
-            alert("You lose!!");
-            reset();
+            //alert("You lose!!");
+            $('#game').addClass('hidden');
+            $('#gameover').removeClass('hidden');
+            //reset();
         }
+    });
+
+    //
+    $(".btn-restartGame").click(function () {
+        $('#game').removeClass('hidden');
+        $('#gameover').addClass('hidden');
+        $('#congrats').addClass('hidden');
+        reset();
     });
 });
